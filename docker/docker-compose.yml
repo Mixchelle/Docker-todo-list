@@ -6,7 +6,7 @@ services:
     ports:
       - 3001:3001
     networks:
-      - todo-app
+      - rede
   todofront:
     depends_on:
       - todoback
@@ -18,7 +18,7 @@ services:
     ports:
       - 3000:3000
     networks:
-      - todo-app
+      - rede
   todotests:
     depends_on:
       - todoback
@@ -29,7 +29,7 @@ services:
       - FRONT_HOST=todofront
       - FRONT_PORT=3000
     networks:
-      - todo-app
+      - rede
 
   networks:
-    todo-app:
+    rede:
